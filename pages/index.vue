@@ -14,7 +14,18 @@
 
 <script>
 export default {
-  // middleware: ['auth'],
+  middleware: ['auth'],
+  computed: {
+    redirect () {
+      return (
+        this.$route.query.redirect &&
+        decodeURIComponent(this.$route.query.redirect)
+      )
+    },
+    isCallback () {
+      return Boolean(this.$route.query.callback)
+    }
+  },
 }
 </script>
 
