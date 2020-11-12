@@ -48,35 +48,35 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
 
-  auth: {
-    redirect: {
-      callback: '/callback',
-      logout: '/signed-out',
-    },
-    strategies: {
-      local: {
-        token: {
-          property: 'token.accessToken',
-        },
-      },
-      localRefresh: {
-        scheme: 'refresh',
-        token: {
-          property: 'token.accessToken',
-          maxAge: 15,
-        },
-        refreshToken: {
-          property: 'token.refreshToken',
-          data: 'refreshToken',
-          maxAge: false,
-        },
-      },
-      github: {
-        clientId: process.env.GITHUB_CLIENT_ID,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      },
-    },
-  },
+  // auth: {
+  //   redirect: {
+  //     callback: '/callback',
+  //     logout: '/signed-out',
+  //   },
+  //   strategies: {
+  //     local: {
+  //       token: {
+  //         property: 'token.accessToken',
+  //       },
+  //     },
+  //     localRefresh: {
+  //       scheme: 'refresh',
+  //       token: {
+  //         property: 'token.accessToken',
+  //         maxAge: 15,
+  //       },
+  //       refreshToken: {
+  //         property: 'token.refreshToken',
+  //         data: 'refreshToken',
+  //         maxAge: false,
+  //       },
+  //     },
+  //     github: {
+  //       clientId: process.env.GITHUB_CLIENT_ID,
+  //       clientSecret: process.env.GITHUB_CLIENT_SECRET,
+  //     },
+  //   },
+  // },
 
   // router ?
   // router: {
