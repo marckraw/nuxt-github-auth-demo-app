@@ -2,16 +2,8 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">github-auth-demo-app</h1>
+      <h3 class="title">github-auth-demo-app</h3>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
         <button class="button--grey" @click="$auth.loginWith('github')">
           Authorize GitHub (Login with GitHub)
         </button>
