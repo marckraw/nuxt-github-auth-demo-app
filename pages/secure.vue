@@ -46,7 +46,7 @@ export default {
   computed: {
     state() {
       return JSON.stringify(this.$auth.$state, undefined, 2)
-    },
+    }
   },
   methods: {
     async createRepository() {
@@ -70,11 +70,11 @@ export default {
       // get specific repo data
       const result = await this.$axios.get('https://api.github.com/repos/marckraw/nuxt-github-auth-demo-app')
 
-      console.log(result);
+      console.log(result)
     },
     check() {
       console.log(this.$auth.$storage.getLocalStorage('_token.github'))
-    },
-  },
+    }
+  }
 }
 </script>

@@ -1,22 +1,26 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'github-auth-demo-app',
+    title: 'Github auth + custom node api (nuxtJS) + Netlify deploy Demo App',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   env: {
-    someEnv: process.env.SOME_ENV || 'no-env',
+    someEnv: process.env.SOME_ENV || 'no-env'
   },
   generate: {
-    fallback: true,
+    fallback: true
   },
-  mode: 'universal',
+
+  serverMiddleware: [
+    // Will register file from project api directory to handle /api/* requires
+    { path: '/api', handler: '~/api/index.js' }
+  ],
 
   // serverMiddleware: ['~/api/auth'],
 
@@ -32,14 +36,14 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth',
+    '@nuxtjs/auth'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -53,30 +57,13 @@ export default {
       callback: '/callback'
     },
     strategies: {
-        github: {
-          scope: ['repo', 'public_repo', 'user'],
-          client_id: process.env.GITHUB_CLIENT_ID,
-          client_secret: process.env.GITHUB_CLIENT_SECRET
-        },
+      github: {
+        scope: ['repo', 'public_repo', 'user'],
+        client_id: process.env.GITHUB_CLIENT_ID,
+        client_secret: process.env.GITHUB_CLIENT_SECRET
+      }
     }
   }
-
-  // auth: {
-  //   redirect: {
-  //     callback: '/callback'
-  //   },
-  //   strategies: {
-  //     local: {
-  //       endpoints: {
-  //         login: { propertyName: 'token.accessToken' }
-  //       }
-  //     },
-  //     github: {
-        // client_id: process.env.GITHUB_CLIENT_ID,
-        // client_secret: process.env.GITHUB_CLIENT_SECRET
-  //     },
-  //   }
-  // }
 
   // router ?
   // router: {

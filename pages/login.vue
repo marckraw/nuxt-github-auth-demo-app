@@ -13,6 +13,10 @@
 </template>
 
 <script>
+
+// const personalAccessTokenFromNetlify = j-v_UjoXJbPhqMO0MjOSfDqtgrX_Wnfy0cgIN3PwZqs
+
+
 export default {
   computed: {
     redirect () {
