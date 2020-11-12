@@ -2,9 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        github-auth-demo-app
-      </h1>
+      <h1 class="title">github-auth-demo-app</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -14,10 +12,7 @@
         >
           Documentation
         </a>
-        <button
-          class="button--grey"
-          @click="$auth.loginWith('github')"
-        >
+        <button class="button--grey" @click="$auth.loginWith('github')">
           Authorize GitHub (Login with GitHub)
         </button>
       </div>
@@ -26,7 +21,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  middleware: ['auth'],
+}
 </script>
 
 <style>
@@ -45,16 +42,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
