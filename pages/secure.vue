@@ -32,7 +32,7 @@
       <b-button @click="$auth.fetchUser()">
         Fetch User
       </b-button>
-      <b-button @click="refreshTokens">
+      <b-button @click="refreshTokens()">
         Refresh Tokens
       </b-button>
       <b-button @click="$auth.logout()">
@@ -44,7 +44,6 @@
 
 <script>
 export default {
-  middleware: ['auth'],
   computed: {
     state () {
       return JSON.stringify(this.$auth.$state, undefined, 2)

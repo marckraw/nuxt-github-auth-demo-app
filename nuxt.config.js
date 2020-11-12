@@ -18,7 +18,7 @@ export default {
   },
   mode: 'universal',
 
-  serverMiddleware: ['~/api/auth'],
+  // serverMiddleware: ['~/api/auth'],
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
@@ -48,6 +48,18 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
 
+  auth: {
+    redirect: {
+      callback: '/callback'
+    },
+    strategies: {
+        github: {
+          client_id: process.env.GITHUB_CLIENT_ID,
+          client_secret: process.env.GITHUB_CLIENT_SECRET
+        },
+    }
+  }
+
   // auth: {
   //   redirect: {
   //     callback: '/callback'
@@ -59,8 +71,8 @@ export default {
   //       }
   //     },
   //     github: {
-  //       client_id: process.env.GITHUB_CLIENT_ID,
-  //       client_secret: process.env.GITHUB_CLIENT_SECRET
+        // client_id: process.env.GITHUB_CLIENT_ID,
+        // client_secret: process.env.GITHUB_CLIENT_SECRET
   //     },
   //   }
   // }
