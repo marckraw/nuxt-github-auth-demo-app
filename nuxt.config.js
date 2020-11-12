@@ -50,33 +50,20 @@ export default {
 
   // auth: {
   //   redirect: {
-  //     callback: '/callback',
-  //     logout: '/signed-out',
+  //     callback: '/callback'
   //   },
   //   strategies: {
   //     local: {
-  //       token: {
-  //         property: 'token.accessToken',
-  //       },
-  //     },
-  //     localRefresh: {
-  //       scheme: 'refresh',
-  //       token: {
-  //         property: 'token.accessToken',
-  //         maxAge: 15,
-  //       },
-  //       refreshToken: {
-  //         property: 'token.refreshToken',
-  //         data: 'refreshToken',
-  //         maxAge: false,
-  //       },
+  //       endpoints: {
+  //         login: { propertyName: 'token.accessToken' }
+  //       }
   //     },
   //     github: {
-  //       clientId: process.env.GITHUB_CLIENT_ID,
-  //       clientSecret: process.env.GITHUB_CLIENT_SECRET,
+  //       client_id: process.env.GITHUB_CLIENT_ID,
+  //       client_secret: process.env.GITHUB_CLIENT_SECRET
   //     },
-  //   },
-  // },
+  //   }
+  // }
 
   // router ?
   // router: {
