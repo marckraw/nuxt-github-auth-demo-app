@@ -16,8 +16,9 @@
         </a>
         <button
           class="button--grey"
+          @click="$auth.loginWith('github')"
         >
-          Authorize GitHub
+          Authorize GitHub (Login with GitHub)
         </button>
       </div>
     </div>
