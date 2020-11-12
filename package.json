@@ -15,10 +15,12 @@
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "core-js": "^3.6.5",
+    "execa": "^4.1.0",
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
     "jsonwebtoken": "^8.5.1",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "sb-mig": "^2.9.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.1.0",
